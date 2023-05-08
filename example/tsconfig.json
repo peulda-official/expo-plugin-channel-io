@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-plugin-channel-io": ["../src/index"],
+      "expo-plugin-channel-io/*": ["../src/*"]
+    }
+  }
+}
