@@ -32,7 +32,7 @@ export function App() {
   useEffect(() => {
     ChannelIO
       .boot({ pluginKey: 'YOUR_PLUGIN_KEY' })
-      .then(() => ChannelIO.showMessenger())
+      .then(() => ChannelIO.showChannelButton())
   }, [])
 
   return (
