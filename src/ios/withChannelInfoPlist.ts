@@ -16,6 +16,7 @@ export const withChannelInfoPlist: ConfigPlugin<ChannelPluginProps> = (
       config.modResults.NSCameraUsageDescription =
         cameraPermission ||
         config.modResults.NSCameraUsageDescription ||
+        config.ios?.infoPlist?.NSCameraUsageDescription ||
         CAMERA_USAGE
     }
 
@@ -23,6 +24,7 @@ export const withChannelInfoPlist: ConfigPlugin<ChannelPluginProps> = (
       config.modResults.NSPhotoLibraryUsageDescription =
         photosPermission ||
         config.modResults.NSPhotoLibraryUsageDescription ||
+        config.ios?.infoPlist?.NSPhotoLibraryUsageDescription ||
         READ_PHOTOS_USAGE
     }
 
@@ -30,6 +32,7 @@ export const withChannelInfoPlist: ConfigPlugin<ChannelPluginProps> = (
       config.modResults.NSMicrophoneUsageDescription =
         microphonePermission ||
         config.modResults.NSMicrophoneUsageDescription ||
+        config.ios?.infoPlist?.NSMicrophoneUsageDescription ||
         MICROPHONE_USAGE
     }
 
