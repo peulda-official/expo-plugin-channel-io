@@ -38,5 +38,8 @@
   "peerDependencies": {
     "expo": ">=48.0.0",
     "react-native-channel-plugin": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
