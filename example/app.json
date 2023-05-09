@@ -14,6 +14,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      "@peulda/expo-plugin-channel-io"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "expo.modules.pluginchannelio.example"

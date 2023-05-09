@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import <ChannelIOFront/ChannelIOFront-swift.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
@@ -13,6 +14,7 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
+  [ChannelIO initialize:application];
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 

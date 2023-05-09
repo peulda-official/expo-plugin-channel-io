@@ -1,4 +1,5 @@
 package expo.modules.pluginchannelio.example;
+import com.zoyi.channel.plugin.android.ChannelIO;
 
 import android.app.Application;
 import android.content.res.Configuration;
@@ -66,6 +67,7 @@ public class MainApplication extends Application implements ReactApplication {
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
     ApplicationLifecycleDispatcher.onApplicationCreate(this);
+    ChannelIO.initialize(this);
   }
 
   @Override
