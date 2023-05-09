@@ -12,7 +12,7 @@ npm install @peulda/expo-plugin-channel-io react-native-channel-plugin
 ```
 
 # Usage
-```json
+```jsonc
 // app.json
 {
   "expo": {
@@ -57,7 +57,7 @@ pod 'ChannelIOSDK', podspec: 'https://mobile-static.channel.io/ios/latest/xcfram
 
 If you need to install a specific package version, you can set the version in `podVersion` option.
 
-```json
+```jsonc
 {
   "expo": {
     "plugins": [
@@ -73,7 +73,7 @@ It will set the `ChannelIOSDK` podspec to:
 pod 'ChannelIOSDK', podspec: 'https://mobile-static.channel.io/ios/10.3.0/xcframework.podspec'
 ```
 
-## Permissions (iOS only)
+## `cameraPermission`, `photosPermission` and `microphonePermission` (iOS only)
 Channel plugin required [some permissions](https://developers.channel.io/docs/react-native-quickstart#2-add-the-permission-and-description-used-by-sdk). By default, this plugin sets these permissions with following values:
 
 | Key | Value |
@@ -84,7 +84,7 @@ Channel plugin required [some permissions](https://developers.channel.io/docs/re
 
 If you already set these permissions via `infoPlist` or other plugins then, This plugin use your values.
 
-```json
+```jsonc
 {
   "expo": {
     "ios": {
@@ -102,9 +102,9 @@ If you already set these permissions via `infoPlist` or other plugins then, This
 }
 ```
 
-If you set `permissions` option, This plugin override these permissions with plugin values.
+If you set `cameraPermission`, `photosPermission` and `microphonePermission` options, This plugin override these permissions with plugin values.
 
-```json
+```jsonc
 {
   "expo": {
     "ios": {
@@ -116,12 +116,10 @@ If you set `permissions` option, This plugin override these permissions with plu
     },
     "plugins": [
       ["@peulda/expo-plugin-channel-io", {
-        "permissions": {
-          // Permission popup will show with `camera`, `photos`, `microphone`
-          "cameraPermission": "camera",
-          "photosPermission": "photos",
-          "microphonePermission": "microphone"
-        }
+        // Permission popup will show with `camera`, `photos`, `microphone`
+        "cameraPermission": "camera",
+        "photosPermission": "photos",
+        "microphonePermission": "microphone"
       }]
     ]
   }
