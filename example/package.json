@@ -20,6 +20,7 @@
     "@babel/core": "^7.23.9",
     "@types/react": "~18.2.45",
     "@types/react-native-channel-plugin": "^0.7.3",
+    "babel-plugin-module-resolver": "^5.0.0",
     "typescript": "^5.3.0"
   },
   "private": true,
