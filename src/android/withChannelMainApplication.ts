@@ -105,7 +105,7 @@ function modifyKotlinMainActivity(contents: string) {
   return lines.join('\n')
 }
 
-export const withAndroidChannelPlugin: ConfigPlugin<ChannelPluginProps> = (
+export const withChannelMainApplication: ConfigPlugin<ChannelPluginProps> = (
   config: ExpoConfig
 ) => {
   return withMainApplication(config, (config) => {

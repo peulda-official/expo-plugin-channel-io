@@ -53,7 +53,6 @@ target 'expopluginchannelioexample' do
     :flipper_configuration => flipper_config
   )
 
-  pod 'ChannelIOSDK', podspec: 'https://mobile-static.channel.io/ios/latest/xcframework.podspec'
   post_install do |installer|
     react_native_post_install(
       installer,
